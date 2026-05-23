@@ -1,844 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yash Gupta - high school student, innovator, researcher, and student leader from New Delhi." />
+  <meta name="description" content="Yash Gupta — High School Student, Researcher, Innovator & Student Leader from New Delhi." />
   <title>Yash Gupta | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg: #090909;
-      --panel: #111111;
-      --line: rgba(232, 226, 217, 0.12);
-      --line-strong: rgba(180, 140, 80, 0.36);
-      --text: #e8e2d9;
-      --muted: rgba(232, 226, 217, 0.68);
-      --soft: rgba(232, 226, 217, 0.48);
-      --gold: #b48c50;
-      --gold-soft: rgba(180, 140, 80, 0.15);
-      --accent: #7ca7a0;
-      --serif: "Cormorant Garamond", Georgia, serif;
-      --mono: "DM Mono", Consolas, monospace;
-      --sans: "DM Sans", Arial, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(255,255,255,0.02) 1px, transparent 1px),
-        var(--bg);
-      background-size: 72px 72px;
-      color: var(--text);
-      font-family: var(--sans);
-      font-weight: 300;
-      overflow-x: hidden;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-      z-index: 20;
-      opacity: 0.45;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .site-nav {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 18px clamp(20px, 4vw, 56px);
-      border-bottom: 1px solid rgba(180, 140, 80, 0.16);
-      background: rgba(9, 9, 9, 0.84);
-      backdrop-filter: blur(14px);
-    }
-
-    .brand {
-      font-family: var(--serif);
-      font-size: 24px;
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-    }
-
-    .brand em {
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: clamp(14px, 3vw, 34px);
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .nav-links a,
-    .resume-link,
-    .eyebrow,
-    .project-kicker,
-    .stat-label,
-    .award-meta,
-    .footer-meta {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 160ms ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .resume-link {
-      border: 1px solid var(--line-strong);
-      color: var(--gold);
-      padding: 9px 14px;
-      text-decoration: none;
-      transition: background 160ms ease, color 160ms ease;
-      white-space: nowrap;
-    }
-
-    .resume-link:hover {
-      background: var(--gold-soft);
-    }
-
-    main {
-      isolation: isolate;
-    }
-
-    .hero {
-      min-height: 100svh;
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
-      align-items: end;
-      gap: clamp(36px, 6vw, 96px);
-      padding: 142px clamp(20px, 4vw, 56px) 62px;
-      border-bottom: 1px solid rgba(180, 140, 80, 0.14);
-    }
-
-    .eyebrow {
-      color: rgba(180, 140, 80, 0.76);
-      margin-bottom: 22px;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    h1 {
-      max-width: 900px;
-      margin-bottom: 22px;
-      font-family: var(--serif);
-      font-size: clamp(68px, 11vw, 156px);
-      font-weight: 400;
-      line-height: 0.86;
-      letter-spacing: 0;
-    }
-
-    h1 em,
-    .section-title em,
-    .contact-title em {
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    .tagline {
-      margin-bottom: 26px;
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: clamp(12px, 1.3vw, 15px);
-      letter-spacing: 0.14em;
-      line-height: 1.8;
-      text-transform: uppercase;
-    }
-
-    .hero-copy {
-      max-width: 620px;
-      margin-bottom: 38px;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.8;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-      padding: 12px 22px;
-      border: 1px solid var(--line-strong);
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: transform 160ms ease, background 160ms ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .button.primary {
-      background: var(--gold);
-      color: #090909;
-    }
-
-    .button.secondary {
-      color: var(--gold);
-    }
-
-    .hero-aside {
-      align-self: stretch;
-      display: grid;
-      align-content: end;
-      gap: 18px;
-    }
-
-    .spotlight-card {
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(135deg, rgba(180, 140, 80, 0.12), rgba(124, 167, 160, 0.08)),
-        rgba(255,255,255,0.018);
-      padding: clamp(22px, 4vw, 34px);
-    }
-
-    .spotlight-label {
-      margin-bottom: 18px;
-      color: var(--gold);
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .spotlight-card h2 {
-      margin-bottom: 18px;
-      font-family: var(--serif);
-      font-size: clamp(34px, 4.2vw, 58px);
-      font-weight: 400;
-      line-height: 0.98;
-    }
-
-    .spotlight-card p,
-    .focus-list li {
-      color: var(--muted);
-      line-height: 1.76;
-    }
-
-    .focus-list {
-      display: grid;
-      gap: 14px;
-      margin: 24px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .focus-list li {
-      position: relative;
-      padding-left: 26px;
-    }
-
-    .focus-list li::before {
-      content: "";
-      position: absolute;
-      top: 0.72em;
-      left: 0;
-      width: 8px;
-      height: 8px;
-      border: 1px solid var(--gold);
-      background: var(--gold-soft);
-    }
-
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .quick-item {
-      min-height: 116px;
-      border: 1px solid var(--line);
-      padding: 18px;
-      background: rgba(255,255,255,0.016);
-    }
-
-    .quick-item strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .quick-item span {
-      color: var(--soft);
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      line-height: 1.5;
-      text-transform: uppercase;
-    }
-
-    .section {
-      padding: clamp(76px, 9vw, 120px) clamp(20px, 4vw, 56px);
-      border-bottom: 1px solid rgba(232, 226, 217, 0.08);
-    }
-
-    .section-header {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      align-items: end;
-      gap: 18px 28px;
-      margin-bottom: 52px;
-    }
-
-    .section-num {
-      color: rgba(180, 140, 80, 0.7);
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.18em;
-    }
-
-    .section-title {
-      margin: 0;
-      font-family: var(--serif);
-      font-size: clamp(42px, 6vw, 76px);
-      font-weight: 400;
-      line-height: 0.95;
-    }
-
-    .section-rule {
-      grid-column: 1 / -1;
-      height: 1px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      opacity: 0.45;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-      gap: clamp(36px, 7vw, 94px);
-      align-items: start;
-    }
-
-    .lead {
-      color: var(--muted);
-      font-size: clamp(18px, 2vw, 24px);
-      line-height: 1.68;
-    }
-
-    .lead strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      border: 1px solid var(--line);
-    }
-
-    .stat {
-      min-height: 142px;
-      padding: 24px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .stat:nth-child(2n) {
-      border-right: 0;
-    }
-
-    .stat:nth-last-child(-n + 2) {
-      border-bottom: 0;
-    }
-
-    .stat-number {
-      margin-bottom: 10px;
-      color: var(--gold);
-      font-family: var(--serif);
-      font-size: 54px;
-      line-height: 0.9;
-    }
-
-    .stat-label {
-      color: var(--soft);
-      line-height: 1.5;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .project-card {
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 26px;
-      border: 1px solid var(--line);
-      background: linear-gradient(140deg, rgba(255,255,255,0.035), rgba(255,255,255,0.008));
-    }
-
-    .project-card.featured {
-      grid-column: span 2;
-      min-height: 360px;
-      background:
-        radial-gradient(circle at 88% 18%, rgba(124, 167, 160, 0.2), transparent 28%),
-        linear-gradient(140deg, rgba(180, 140, 80, 0.14), rgba(255,255,255,0.012));
-    }
-
-    .project-kicker {
-      color: var(--gold);
-      margin-bottom: 18px;
-    }
-
-    .project-card h3,
-    .award-title,
-    .club-title {
-      margin-bottom: 12px;
-      color: var(--text);
-      font-size: clamp(22px, 3vw, 34px);
-      line-height: 1.08;
-    }
-
-    .project-card p,
-    .award-copy,
-    .club-copy {
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.72;
-    }
-
-    .project-tags,
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 26px;
-    }
-
-    .detail-grid,
-    .gallery-grid,
-    .speaking-grid,
-    .impact-grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    .detail-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      margin-top: 18px;
-    }
-
-    .detail-card,
-    .speaking-card,
-    .impact-card {
-      border: 1px solid var(--line);
-      padding: 24px;
-      background: rgba(255,255,255,0.014);
-    }
-
-    .detail-card h3,
-    .speaking-card h3,
-    .impact-card h3 {
-      margin-bottom: 12px;
-      color: var(--text);
-      font-size: 22px;
-      line-height: 1.16;
-    }
-
-    .detail-card p,
-    .speaking-card p,
-    .impact-card p {
-      color: var(--muted);
-      line-height: 1.72;
-    }
-
-    .gallery-intro {
-      max-width: 780px;
-      margin: -22px 0 34px;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.75;
-    }
-
-    .gallery-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .gallery-card {
-      min-height: 360px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.014);
-      overflow: hidden;
-    }
-
-    .art-tile {
-      height: 230px;
-      border-bottom: 1px solid var(--line);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .art-tile::before,
-    .art-tile::after {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border: 1px solid rgba(232, 226, 217, 0.18);
-    }
-
-    .art-one {
-      background:
-        radial-gradient(circle at 28% 28%, rgba(180,140,80,0.95) 0 8%, transparent 9%),
-        linear-gradient(135deg, rgba(124,167,160,0.34), transparent 34%),
-        repeating-linear-gradient(90deg, rgba(232,226,217,0.15) 0 1px, transparent 1px 20px),
-        #121212;
-    }
-
-    .art-two {
-      background:
-        radial-gradient(circle at 70% 30%, rgba(232,226,217,0.2), transparent 22%),
-        linear-gradient(160deg, transparent 0 42%, rgba(180,140,80,0.86) 43% 50%, transparent 51%),
-        linear-gradient(32deg, rgba(124,167,160,0.42), transparent 62%),
-        #101010;
-    }
-
-    .art-three {
-      background:
-        repeating-linear-gradient(135deg, rgba(232,226,217,0.11) 0 2px, transparent 2px 18px),
-        radial-gradient(circle at 52% 54%, rgba(180,140,80,0.55), transparent 24%),
-        #0d0d0d;
-    }
-
-    .art-four {
-      background:
-        linear-gradient(90deg, rgba(180,140,80,0.75) 0 18%, transparent 18% 100%),
-        radial-gradient(circle at 72% 70%, rgba(124,167,160,0.62), transparent 28%),
-        repeating-linear-gradient(0deg, rgba(232,226,217,0.1) 0 1px, transparent 1px 14px),
-        #111111;
-    }
-
-    .gallery-body {
-      padding: 20px;
-    }
-
-    .gallery-body h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-      line-height: 1.15;
-    }
-
-    .gallery-body p {
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    .speaking-grid,
-    .impact-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .tag,
-    .skill-list span {
-      border: 1px solid rgba(232, 226, 217, 0.16);
-      padding: 8px 10px;
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .award-list,
-    .club-list {
-      display: grid;
-      gap: 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .award-row,
-    .club-row {
-      display: grid;
-      grid-template-columns: 160px minmax(0, 1fr);
-      gap: 28px;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .award-meta {
-      color: var(--gold);
-      line-height: 1.5;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .skill-block {
-      padding: 24px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.018);
-    }
-
-    .skill-block h3 {
-      margin-bottom: 18px;
-      color: var(--gold);
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
-      gap: clamp(34px, 7vw, 88px);
-      align-items: start;
-    }
-
-    .contact-title {
-      margin-bottom: 28px;
-      font-family: var(--serif);
-      font-size: clamp(54px, 8vw, 104px);
-      font-weight: 400;
-      line-height: 0.9;
-    }
-
-    .contact-links {
-      display: grid;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .contact-links a,
-    .contact-links span {
-      display: block;
-      color: var(--muted);
-      text-decoration: none;
-      line-height: 1.55;
-    }
-
-    .contact-links a:hover {
-      color: var(--gold);
-    }
-
-    .contact-note {
-      border-left: 1px solid var(--line-strong);
-      padding-left: 24px;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.78;
-    }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 28px clamp(20px, 4vw, 56px);
-      color: var(--soft);
-      border-top: 1px solid rgba(232, 226, 217, 0.08);
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 520ms ease, transform 520ms ease;
-    }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 900px) {
-      .site-nav {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        align-items: start;
-      }
-
-      .project-grid,
-      .skills-grid,
-      .detail-grid,
-      .gallery-grid,
-      .speaking-grid,
-      .impact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-card.featured {
-        grid-column: auto;
-      }
-
-      .quick-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .site-nav {
-        padding: 14px 18px;
-      }
-
-      .brand {
-        font-size: 20px;
-      }
-
-      .resume-link {
-        padding: 8px 10px;
-        font-size: 10px;
-      }
-
-      .hero {
-        padding-top: 112px;
-      }
-
-      h1 {
-        font-size: 64px;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stat,
-      .stat:nth-child(2n),
-      .stat:nth-last-child(-n + 2) {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .stat:last-child {
-        border-bottom: 0;
-      }
-
-      .award-row,
-      .club-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      footer {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="site-nav" aria-label="Primary navigation">
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
     <a class="brand" href="#top">Yash <em>Gupta</em></a>
-    <ul class="nav-links">
+
+    <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#achievements">Awards</a></li>
       <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="resume-link" href="assets/Yash_Gupta_Resume.pdf" download>Resume</a>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <span class="theme-icon">◐</span>
+      </button>
+      <a class="resume-btn" href="assets/Yash_Gupta_Resume.pdf" download>↓ Resume</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#achievements">Awards</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="resume-btn" href="assets/Yash_Gupta_Resume.pdf" download>↓ Download Resume</a>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
   <main id="top">
+
+    <!-- ═══ HERO ═══ -->
     <section class="hero">
-      <div class="fade-up">
-        <div class="eyebrow">001 - Portfolio</div>
-        <h1>Yash<br><em>Gupta</em></h1>
-        <p class="tagline">High School Student / Researcher / Student Leader</p>
+      <div class="hero-left fade-up">
+        <div class="eyebrow">001 — Portfolio / New Delhi</div>
+        <h1 class="hero-name">
+          <span class="typewriter" id="typewriter"></span>
+        </h1>
+        <p class="tagline">High School Student &nbsp;·&nbsp; Researcher &nbsp;·&nbsp; Student Leader</p>
         <p class="hero-copy">
-          I build at the intersection of sustainability, technology, community service, and creative problem-solving. My work spans biodegradable materials, urban waterlogging systems, mental-health technology, public speaking, speculative cosmology, and visual storytelling.
+          I build at the intersection of sustainability, technology, community service, and creative problem-solving — from biodegradable materials to speculative cosmology, mental-health tech, and visual storytelling.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button secondary" href="#contact">Get in Touch</a>
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
         </div>
       </div>
 
-      <div class="hero-aside fade-up">
+      <div class="hero-right fade-up delay-1">
         <div class="spotlight-card">
           <div class="spotlight-label">Currently Working On</div>
-          <h2>Research, civic design, and a sharper creative archive.</h2>
-          <p>
-            I am building this portfolio as a living record of projects, experiments, recognition, and future collaborations.
-          </p>
+          <h2>Research, civic design & a sharper creative archive.</h2>
+          <p>This portfolio is a living record of projects, experiments, recognition, and future collaborations.</p>
           <ul class="focus-list">
-            <li>Seeking academic collaboration for the Cosmic Isolation framework.</li>
-            <li>Documenting sustainability prototypes and civic-tech ideas with clearer evidence.</li>
-            <li>Building an art and visual-thinking gallery alongside technical work.</li>
+            <li>Seeking academic collaboration for the Cosmic Isolation framework</li>
+            <li>Documenting sustainability prototypes with clearer evidence</li>
+            <li>Building an art and visual-thinking gallery alongside technical work</li>
           </ul>
         </div>
-        <div class="quick-grid" aria-label="Quick profile highlights">
-          <div class="quick-item">
-            <strong>Delhi</strong>
-            <span>Springdales School</span>
-          </div>
-          <div class="quick-item">
-            <strong>4 Domains</strong>
-            <span>STEM / Design / Service / Arts</span>
-          </div>
-          <div class="quick-item">
-            <strong>Open</strong>
-            <span>Mentorship & collaboration</span>
-          </div>
+        <div class="quick-grid">
+          <div class="quick-item"><strong>Delhi</strong><span>Springdales School</span></div>
+          <div class="quick-item"><strong>4 Domains</strong><span>STEM / Design / Service / Arts</span></div>
+          <div class="quick-item"><strong>Open</strong><span>Mentorship & collaboration</span></div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ ABOUT ═══ -->
     <section id="about" class="section">
       <div class="section-header fade-up">
         <span class="section-num">002</span>
@@ -847,30 +104,36 @@
       </div>
 
       <div class="about-grid fade-up">
-        <p class="lead">
-          I am a high school student at <strong>Springdales School, Pusa Road, New Delhi</strong>, with a strong interest in interdisciplinary research, innovation, leadership, and community impact. My projects often begin with a practical problem: pollution, waterlogging, student wellbeing, access to hygiene, or the way young people engage with science.
-        </p>
-        <div class="stats-grid" aria-label="Profile highlights">
+        <div>
+          <p class="lead">
+            I'm a high school student at <strong>Springdales School, Pusa Road, New Delhi</strong> (2014–2026), with a strong interest in interdisciplinary research, innovation, leadership, and community impact. My projects begin with a practical problem: pollution, waterlogging, student wellbeing, access to hygiene, or how young people engage with science.
+          </p>
+          <p class="lead" style="margin-top:1.2em;">
+            Beyond the lab, I explore <strong>art, animation, vision boards</strong>, and creative work — believing the best ideas live at the intersection of disciplines. I was awarded the title of <strong>Mr. Springdales</strong>, the top all-round personality title at my school.
+          </p>
+        </div>
+        <div class="stats-grid">
           <div class="stat">
-            <div class="stat-number">88.6%</div>
-            <div class="stat-label">Class 10 Academic Record</div>
+            <div class="stat-number counter" data-target="88.6" data-decimals="1" data-suffix="%">0%</div>
+            <div class="stat-label">Class 10 Score</div>
           </div>
           <div class="stat">
-            <div class="stat-number">4+</div>
-            <div class="stat-label">Independent Projects</div>
+            <div class="stat-number counter" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Projects</div>
           </div>
           <div class="stat">
-            <div class="stat-number">1st</div>
-            <div class="stat-label">A.K. Saha State Competition</div>
+            <div class="stat-number" style="font-size:2.8rem;">1st</div>
+            <div class="stat-label">State Competition Wins</div>
           </div>
           <div class="stat">
-            <div class="stat-number">2026</div>
-            <div class="stat-label">Springdales School</div>
+            <div class="stat-number counter" data-target="2026">2014</div>
+            <div class="stat-label">Graduating Year</div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ PROJECTS ═══ -->
     <section id="projects" class="section">
       <div class="section-header fade-up">
         <span class="section-num">003</span>
@@ -879,137 +142,152 @@
       </div>
 
       <div class="project-grid fade-up">
+
         <article class="project-card featured">
-          <div>
-            <div class="project-kicker">Sustainability / Materials</div>
+          <div class="project-card-inner">
+            <div class="project-kicker">Sustainability / Materials Science</div>
             <h3>Green Designing of Biomass</h3>
-            <p>
-              Created biodegradable packaging from agricultural waste to reduce air pollution and empower farmers. The project also explored conductive composite material made by combining pollution-derived particulates with biomass substrate inspired by pollution-to-ink research.
-            </p>
+            <p>Created biodegradable packaging from agricultural waste to reduce Delhi's stubble-burning air pollution and empower farmers. Also independently discovered a conductive composite material by combining pollution-derived particulates with biomass substrate, inspired by pollution-to-ink research.</p>
+            <div class="project-badge">🥇 1st — Dr. A.K. Saha State Competition</div>
           </div>
           <div class="project-tags">
             <span class="tag">Biomass</span>
             <span class="tag">Packaging</span>
             <span class="tag">Circular Economy</span>
+            <span class="tag">Conductivity</span>
           </div>
         </article>
 
         <article class="project-card">
-          <div>
-            <div class="project-kicker">Civic Tech</div>
+          <div class="project-card-inner">
+            <div class="project-kicker">Civic Technology</div>
             <h3>Raksita</h3>
-            <p>
-              Developed a cutting-edge solution for urban waterlogging using predictive modeling and real-time sensors.
-            </p>
+            <p>A cutting-edge solution for urban waterlogging using predictive modelling and real-time sensors to prevent infrastructure damage and flooding in Delhi.</p>
+            <div class="project-badge">🥇 1st — Niamat Rai State Competition</div>
           </div>
           <div class="project-tags">
             <span class="tag">Sensors</span>
             <span class="tag">Prediction</span>
+            <span class="tag">Urban Tech</span>
           </div>
         </article>
 
         <article class="project-card">
-          <div>
+          <div class="project-card-inner">
             <div class="project-kicker">Health Technology</div>
             <h3>NeuroHealth</h3>
-            <p>
-              Designed a mental-health monitoring system integrating EXG sensors to provide timely support for high-stress individuals.
-            </p>
+            <p>A mental-health monitoring system integrating EXG sensors to detect stress patterns and provide timely support for high-stress individuals.</p>
+            <div class="project-badge">💰 INR 20K — Humanistic Design Summit 2</div>
           </div>
           <div class="project-tags">
-            <span class="tag">EXG</span>
-            <span class="tag">Wellbeing</span>
+            <span class="tag">EXG Sensors</span>
+            <span class="tag">Mental Health</span>
+            <span class="tag">Wearables</span>
           </div>
         </article>
 
         <article class="project-card">
-          <div>
-            <div class="project-kicker">Physics / Theory</div>
-            <h3>Speculative Cosmology Project</h3>
-            <p>
-              Proposed Cosmic Isolation as a geometric counterpart to black holes in early-universe models, exploring spacetime structure and expansion.
-            </p>
+          <div class="project-card-inner">
+            <div class="project-kicker">Physics / Theoretical Research</div>
+            <h3>Cosmic Isolation</h3>
+            <p>Proposed Cosmic Isolation as a geometric counterpart to black holes in early-universe models — exploring spacetime structure, expansion, and an alternative to singularities.</p>
+            <div class="project-badge">🔭 Seeking academic collaboration</div>
           </div>
           <div class="project-tags">
             <span class="tag">Cosmology</span>
-            <span class="tag">Research</span>
+            <span class="tag">Spacetime</span>
+            <span class="tag">Theoretical Physics</span>
           </div>
         </article>
 
         <article class="project-card">
-          <div>
+          <div class="project-card-inner">
             <div class="project-kicker">Community Impact</div>
             <h3>Sanitary Pad Machine Initiative</h3>
-            <p>
-              Independently launched a sanitary pad machine installation project through Rotary Club work, securing funding and setting a benchmark for student-led initiatives.
-            </p>
+            <p>Independently launched a sanitary pad machine installation project through Rotary Club, securing funding and setting a benchmark for student-led welfare initiatives in Delhi.</p>
+            <div class="project-badge">🏅 Rotary National Recognition</div>
           </div>
           <div class="project-tags">
             <span class="tag">Hygiene</span>
             <span class="tag">Service</span>
+            <span class="tag">Fundraising</span>
           </div>
         </article>
-      </div>
 
-      <div class="detail-grid fade-up">
-        <article class="detail-card">
-          <h3>How I Work</h3>
-          <p>I start with a grounded problem, map who is affected, then move from sketches to prototypes, evidence, presentation, and iteration.</p>
-        </article>
-        <article class="detail-card">
-          <h3>What I Want To Build Next</h3>
-          <p>Better documentation for experiments, clearer project pages, and collaborations with mentors who can help validate the science behind early ideas.</p>
-        </article>
-        <article class="detail-card">
-          <h3>What Connects It All</h3>
-          <p>Most of my work asks one question: how can a student-led idea become useful enough to matter outside a classroom?</p>
-        </article>
       </div>
     </section>
 
+    <!-- ═══ GALLERY ═══ -->
     <section id="gallery" class="section">
       <div class="section-header fade-up">
         <span class="section-num">004</span>
         <h2 class="section-title">Art <em>Gallery</em></h2>
         <div class="section-rule"></div>
       </div>
-
-      <p class="gallery-intro fade-up">
-        A small visual archive for art, design thinking, vision boards, animation experiments, and the kind of image-making that helps technical ideas become easier to understand.
-      </p>
+      <p class="gallery-intro fade-up">A visual archive for art, design thinking, vision boards, animation, and image-making that helps technical ideas become easier to understand.</p>
 
       <div class="gallery-grid fade-up">
-        <article class="gallery-card">
-          <div class="art-tile art-one" aria-hidden="true"></div>
+
+        <article class="gallery-card" data-lightbox
+          data-title="Material Studies"
+          data-desc="Texture-driven pieces inspired by biomass, paper fibers, composite surfaces, and waste-to-resource research.">
+          <div class="art-tile art-one"></div>
           <div class="gallery-body">
             <h3>Material Studies</h3>
-            <p>Texture-driven pieces inspired by biomass, paper fibers, composite surfaces, and waste-to-resource research.</p>
+            <p>Texture & biomass-inspired visual explorations.</p>
           </div>
+          <div class="gallery-overlay"><span>View</span></div>
         </article>
-        <article class="gallery-card">
-          <div class="art-tile art-two" aria-hidden="true"></div>
+
+        <article class="gallery-card" data-lightbox
+          data-title="Vision Boards"
+          data-desc="Curated visual maps for goals, references, future projects, and the mood of long-term creative direction.">
+          <div class="art-tile art-two"></div>
           <div class="gallery-body">
             <h3>Vision Boards</h3>
-            <p>Curated visual maps for goals, references, future projects, and the mood of long-term creative direction.</p>
+            <p>Curated visual maps for goals and future projects.</p>
           </div>
+          <div class="gallery-overlay"><span>View</span></div>
         </article>
-        <article class="gallery-card">
-          <div class="art-tile art-three" aria-hidden="true"></div>
+
+        <article class="gallery-card" data-lightbox
+          data-title="2D Animation"
+          data-desc="Internationally recognized animation work — 1st Place at Flinders University Future Creatives, Australia, representing India.">
+          <div class="art-tile art-three"></div>
           <div class="gallery-body">
             <h3>2D Animation</h3>
-            <p>Internationally recognized animation work connected to storytelling, motion, and visual communication.</p>
+            <p>🥇 Flinders University Future Creatives, Australia.</p>
           </div>
+          <div class="gallery-overlay"><span>View</span></div>
         </article>
-        <article class="gallery-card">
-          <div class="art-tile art-four" aria-hidden="true"></div>
+
+        <article class="gallery-card" data-lightbox
+          data-title="Research Posters"
+          data-desc="Editorial layouts and presentation systems for explaining science, civic design, and speculative physics.">
+          <div class="art-tile art-four"></div>
           <div class="gallery-body">
             <h3>Research Posters</h3>
-            <p>Editorial layouts and presentation systems for explaining science, civic design, and speculative physics.</p>
+            <p>Editorial layouts for science and civic design.</p>
           </div>
+          <div class="gallery-overlay"><span>View</span></div>
         </article>
+
       </div>
     </section>
 
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      <div class="lightbox-content">
+        <div class="lightbox-art" id="lightboxArt"></div>
+        <div class="lightbox-info">
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ ACHIEVEMENTS ═══ -->
     <section id="achievements" class="section">
       <div class="section-header fade-up">
         <span class="section-num">005</span>
@@ -1020,126 +298,171 @@
       <div class="award-list fade-up">
         <article class="award-row">
           <div class="award-meta">Grade 11</div>
-          <div>
-            <h3 class="award-title">1st Position: A.K. Saha State Competition</h3>
-            <p class="award-copy">Recognized for the pioneering Green Designing of Biomass project, emphasizing sustainability and innovation.</p>
+          <div class="award-body">
+            <h3>1st Position — Dr. A.K. Saha State Competition</h3>
+            <p>Recognized for the pioneering Green Designing of Biomass project, emphasizing sustainability and innovation.</p>
           </div>
+          <div class="award-pos">🥇 1st</div>
         </article>
         <article class="award-row">
           <div class="award-meta">Grade 11</div>
-          <div>
-            <h3 class="award-title">1st Position: Niamat Rai State Competition</h3>
-            <p class="award-copy">Developed and presented Raksita, a solution addressing urban waterlogging issues.</p>
+          <div class="award-body">
+            <h3>1st Position — Niamat Rai State Competition</h3>
+            <p>Developed and presented Raksita — a solution addressing urban waterlogging issues.</p>
           </div>
+          <div class="award-pos">🥇 1st</div>
         </article>
         <article class="award-row">
           <div class="award-meta">Grade 11</div>
-          <div>
-            <h3 class="award-title">Excellence in Problem Identification</h3>
-            <p class="award-copy">Awarded INR 20K at Humanistic Design Summit 2, Pan India, for NeuroHealth.</p>
+          <div class="award-body">
+            <h3>Excellence in Problem Identification — Humanistic Design Summit 2</h3>
+            <p>Awarded INR 20,000 Pan India for NeuroHealth — mental health challenges through tech innovation.</p>
           </div>
+          <div class="award-pos">💰 ₹20K</div>
         </article>
         <article class="award-row">
           <div class="award-meta">Grade 11</div>
-          <div>
-            <h3 class="award-title">Flinders University Future Creatives, Australia</h3>
-            <p class="award-copy">1st in 2D Animation and runner-up overall while representing India internationally.</p>
+          <div class="award-body">
+            <h3>1st in 2D Animation — Flinders University Future Creatives, Australia</h3>
+            <p>Represented India internationally; 1st in animation, runner-up overall while collaborating with global academic leaders.</p>
           </div>
+          <div class="award-pos">🌏 Intl.</div>
+        </article>
+        <article class="award-row">
+          <div class="award-meta">Grade 12</div>
+          <div class="award-body">
+            <h3>Mr. Springdales</h3>
+            <p>Awarded the top all-round personality title at Springdales School through evaluation rounds including stage interaction, questioning, and performance.</p>
+          </div>
+          <div class="award-pos">👑 Title</div>
+        </article>
+        <article class="award-row">
+          <div class="award-meta">Grade 11</div>
+          <div class="award-body">
+            <h3>Dr. Sharda Agarwal Memorial Running Trophy</h3>
+            <p>Awarded for Design Thinking and Innovation at Springdales School.</p>
+          </div>
+          <div class="award-pos">🏆</div>
         </article>
         <article class="award-row">
           <div class="award-meta">Grade 10</div>
-          <div>
-            <h3 class="award-title">Vision Quest 4: STEM Recognition &amp; Chandrayaan-3</h3>
-            <p class="award-copy">Recognized for excellence in STEM and selected for a discussion with Mr. M. Srikanth, Director of India's Chandrayaan-3 mission.</p>
+          <div class="award-body">
+            <h3>Vision Quest 4 — STEM Recognition & Chandrayaan-3</h3>
+            <p>Recognized for excellence in STEM; selected for an exclusive discussion with Mr. M. Srikanth, Director of India's Chandrayaan-3 mission.</p>
           </div>
+          <div class="award-pos">🚀</div>
+        </article>
+        <article class="award-row">
+          <div class="award-meta">Grades 1–8</div>
+          <div class="award-body">
+            <h3>All-Rounder Academic Award Winner</h3>
+            <p>Consistently recognized across multiple years for academic excellence and all-round performance.</p>
+          </div>
+          <div class="award-pos">⭐</div>
         </article>
       </div>
     </section>
 
+    <!-- ═══ SPEAKING ═══ -->
     <section id="speaking" class="section">
       <div class="section-header fade-up">
         <span class="section-num">006</span>
         <h2 class="section-title">Speaking &amp; <em>Presence</em></h2>
         <div class="section-rule"></div>
       </div>
-
       <div class="speaking-grid fade-up">
         <article class="speaking-card">
+          <div class="speaking-num">01</div>
           <h3>Citation Ceremony Host</h3>
-          <p>Among two students chosen to host the prestigious Citation Ceremony at Springdales School, attended by the Director of Education, Delhi.</p>
+          <p>Among two students chosen to host the prestigious Citation Ceremony at Springdales, attended by the Director of Education, Delhi. Contributed through oratory and event coordination.</p>
         </article>
         <article class="speaking-card">
-          <h3>Rotary Club Address</h3>
-          <p>Led a Rotary Club initiative and addressed national leaders and school leadership, building collaboration around community engagement.</p>
+          <div class="speaking-num">02</div>
+          <h3>Rotary Club National Address</h3>
+          <p>Led a Rotary Club initiative and addressed national leaders and school leadership, building collaboration around community engagement and welfare.</p>
         </article>
         <article class="speaking-card">
-          <h3>ITIHAAS Summit</h3>
-          <p>Represented Springdales School at the national ITIHAAS Summit on learning spaces, engaging with speakers including Shri Asim Arun and Sonam Wangchuk.</p>
+          <div class="speaking-num">03</div>
+          <h3>ITIHAAS Summit 2025</h3>
+          <p>Represented Springdales at the national ITIHAAS Summit on "Learning Spaces," engaging with Shri Asim Arun and Sonam Wangchuk. Assisted in documenting key insights.</p>
         </article>
         <article class="speaking-card">
+          <div class="speaking-num">04</div>
           <h3>TEDx Participation</h3>
-          <p>Represented Springdales School at Cambridge School, Srinivaspuri, as a participant in the TEDx event.</p>
+          <p>Represented Springdales School at Cambridge School, Srinivaspuri, as a participant in the TEDx event (2024–25).</p>
+        </article>
+        <article class="speaking-card">
+          <div class="speaking-num">05</div>
+          <h3>IIT Delhi — AI & ML Workshop</h3>
+          <p>Selected participant in the Artificial Intelligence and Machine Learning workshop at IIT Delhi — TRYST 2024. Developed introductory understanding of ML workflows and AI applications.</p>
         </article>
       </div>
     </section>
 
+    <!-- ═══ LEADERSHIP ═══ -->
     <section id="leadership" class="section">
       <div class="section-header fade-up">
         <span class="section-num">007</span>
         <h2 class="section-title">Leadership &amp; <em>Clubs</em></h2>
         <div class="section-rule"></div>
       </div>
-
       <div class="club-list fade-up">
         <article class="club-row">
-          <div class="award-meta">Student Council</div>
+          <div class="award-meta">Grade 12</div>
           <div>
-            <h3 class="club-title">Council Member, House Coordinator, Prefect</h3>
-            <p class="club-copy">Represented the student body, coordinated inter-house activities, mentored younger students, and contributed to discipline, event planning, and school culture.</p>
+            <h3>Prefect, Student Council Leader</h3>
+            <p>Selected as senior student leader to uphold discipline, mentor peers, and represent the student body. Key role in decision-making, event planning, and school culture.</p>
           </div>
         </article>
         <article class="club-row">
-          <div class="award-meta">2024-2025</div>
+          <div class="award-meta">Gr. 10–11</div>
           <div>
-            <h3 class="club-title">Interact Club, Club Director</h3>
-            <p class="club-copy">Organized welfare initiatives including blood donation drives and programs for underprivileged children.</p>
+            <h3>Council Member & House Coordinator</h3>
+            <p>Coordinated inter-house activities, mentored younger students, and fostered unity across academic, cultural, and sports domains.</p>
           </div>
         </article>
         <article class="club-row">
-          <div class="award-meta">2024-2025</div>
+          <div class="award-meta">2024–25</div>
           <div>
-            <h3 class="club-title">Rotary Club, Domain Leader</h3>
-            <p class="club-copy">Led the Water Management and Hygiene domain, implementing sustainability-focused projects.</p>
+            <h3>Interact Club — Club Director</h3>
+            <p>Organised welfare initiatives including blood donation drives and programs for underprivileged children.</p>
           </div>
         </article>
         <article class="club-row">
-          <div class="award-meta">2024-2025</div>
+          <div class="award-meta">2024–25</div>
           <div>
-            <h3 class="club-title">Physics Club, Founder</h3>
-            <p class="club-copy">Initiated the club and led workshops helping students explore advanced concepts in physics and innovation.</p>
+            <h3>Rotary Club — Domain Leader</h3>
+            <p>Led the Water Management and Hygiene domain, implementing sustainability-focused projects.</p>
           </div>
         </article>
         <article class="club-row">
-          <div class="award-meta">2023-2025</div>
+          <div class="award-meta">2024–25</div>
           <div>
-            <h3 class="club-title">Innovishkar Club, Vice President</h3>
-            <p class="club-copy">Directed STEM projects and mentored peers in design thinking, prototyping, and creative problem-solving.</p>
+            <h3>Physics Club — Founder</h3>
+            <p>Initiated the club and led workshops helping students explore advanced concepts in physics and innovation.</p>
+          </div>
+        </article>
+        <article class="club-row">
+          <div class="award-meta">2023–25</div>
+          <div>
+            <h3>Innovishkar Club — Vice President</h3>
+            <p>Directed STEM projects and mentored peers in design thinking, prototyping, and creative problem-solving.</p>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- ═══ COMMUNITY ═══ -->
     <section id="community" class="section">
       <div class="section-header fade-up">
         <span class="section-num">008</span>
         <h2 class="section-title">Community <em>Work</em></h2>
         <div class="section-rule"></div>
       </div>
-
       <div class="impact-grid fade-up">
         <article class="impact-card">
           <h3>Earth Saviors Foundation</h3>
-          <p>Earned lifetime membership after assisting senior citizens and disabled individuals, supporting fundraising for medicines and clothing, and helping connect beneficiaries to welfare schemes.</p>
+          <p>Earned lifetime membership after assisting senior citizens and disabled individuals, organising fundraising for medicines and clothing, and connecting beneficiaries to government welfare schemes.</p>
         </article>
         <article class="impact-card">
           <h3>Ashok Sawhney Foundation</h3>
@@ -1148,84 +471,129 @@
       </div>
     </section>
 
+    <!-- ═══ SKILLS ═══ -->
     <section id="skills" class="section">
       <div class="section-header fade-up">
         <span class="section-num">009</span>
         <h2 class="section-title">Skills &amp; <em>Tools</em></h2>
         <div class="section-rule"></div>
       </div>
-
       <div class="skills-grid fade-up">
         <div class="skill-block">
           <h3>Research</h3>
-          <div class="skill-list">
-            <span>Interdisciplinary Research</span>
-            <span>Writing</span>
-            <span>Documentation</span>
-            <span>Data Structures</span>
+          <div class="skill-bar-list">
+            <div class="skill-bar-item">
+              <span>Interdisciplinary Research</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Scientific Writing</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Experimental Design</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
           </div>
         </div>
         <div class="skill-block">
           <h3>Technology</h3>
-          <div class="skill-list">
-            <span>Python</span>
-            <span>Java Basics</span>
-            <span>SQL</span>
-            <span>Web Development</span>
+          <div class="skill-bar-list">
+            <div class="skill-bar-item">
+              <span>Python</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Web Development</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Java / SQL</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+            </div>
           </div>
         </div>
         <div class="skill-block">
           <h3>Communication</h3>
-          <div class="skill-list">
-            <span>Public Speaking</span>
-            <span>Presentation</span>
-            <span>Team Collaboration</span>
-            <span>Leadership</span>
+          <div class="skill-bar-list">
+            <div class="skill-bar-item">
+              <span>Public Speaking</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Leadership</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Team Collaboration</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3>Creative</h3>
+          <div class="skill-bar-list">
+            <div class="skill-bar-item">
+              <span>2D Animation</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Visual Design</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="74"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>Presentation</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ CONTACT ═══ -->
     <section id="contact" class="section">
       <div class="section-header fade-up">
         <span class="section-num">010</span>
         <h2 class="section-title">Get in <em>Touch</em></h2>
         <div class="section-rule"></div>
       </div>
-
       <div class="contact-grid fade-up">
         <div>
           <h2 class="contact-title">Let's<br><em>Connect</em></h2>
+          <p class="contact-note">Open to academic collaboration, research mentorship, STEM opportunities, community initiatives, and conversations around sustainability, civic technology, and student-led innovation.</p>
           <div class="contact-links">
-            <a href="mailto:theyashgupta00@gmail.com">theyashgupta00@gmail.com</a>
-            <a href="tel:+919811132864">+91 9811132864</a>
-            <span>New Delhi, India</span>
-            <a href="https://github.com/TheFalseCreator" target="_blank" rel="noreferrer">github.com/TheFalseCreator</a>
+            <a href="mailto:theyashgupta00@gmail.com">
+              <span class="contact-dot"></span>theyashgupta00@gmail.com
+            </a>
+            <a href="tel:+919811132864">
+              <span class="contact-dot"></span>+91 9811132864
+            </a>
+            <a href="https://github.com/TheFalseCreator" target="_blank" rel="noreferrer">
+              <span class="contact-dot"></span>github.com/TheFalseCreator
+            </a>
+            <span>
+              <span class="contact-dot"></span>New Delhi, India — 110054
+            </span>
           </div>
         </div>
-        <p class="contact-note">
-          I am open to academic collaboration, research mentorship, STEM opportunities, community initiatives, and conversations around sustainability, civic technology, and student-led innovation.
-        </p>
+        <form class="contact-form" id="contactForm">
+          <input type="text" placeholder="Your name" required autocomplete="name" />
+          <input type="email" placeholder="Your email" required autocomplete="email" />
+          <input type="text" placeholder="Subject" />
+          <textarea rows="5" placeholder="Your message"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message →</button>
+          <p class="form-success" id="formSuccess">Message sent! I'll get back to you soon.</p>
+        </form>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <div class="footer-meta">Yash Gupta - Portfolio</div>
-    <div class="footer-meta">New Delhi / 2026</div>
+    <div class="footer-left">Yash Gupta — Portfolio</div>
+    <div class="footer-right">New Delhi · 2026</div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll(".fade-up").forEach((element) => observer.observe(element));
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
