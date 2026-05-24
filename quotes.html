@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes | Yash Gupta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <nav class="site-nav"><a class="brand" href="index.html">Yash <em>G.</em></a><div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="gallery.html">Gallery</a><a href="visionboards.html">Vision Boards</a><a href="now.html">Now</a><a href="contact.html">Contact</a></div><div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle light mode">◐</button><a class="resume-btn label" href="assets/Resume-Yash Gupta .pdf" download>↓ Resume</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></div></nav>
+  <main>
+    <section class="hero page-hero"><div><p class="eyebrow">Words / Thinking / Memory</p><h1 class="hero-title" data-parallax="0.3">QUOTES</h1><p class="hero-copy">Words that changed how I see things.</p></div></section>
+    <section class="section" data-filter-group>
+      <div class="filter-tabs fade-up"><button class="active" data-filter="all">All</button><button data-filter="physics">Physics</button><button data-filter="design">Design</button><button data-filter="leadership">Leadership</button><button data-filter="life">Life</button></div>
+      <div class="quote-grid fade-up">
+        <article class="quote-card" data-category="physics"><blockquote>The most beautiful thing we can experience is the mysterious.</blockquote><cite>Einstein</cite></article>
+        <article class="quote-card" data-category="design"><blockquote>Design is not just what it looks like. Design is how it works.</blockquote><cite>Steve Jobs</cite></article>
+        <article class="quote-card" data-category="design"><blockquote>If you can't explain it simply, you don't understand it well enough.</blockquote><cite>Feynman</cite></article>
+        <article class="quote-card" data-category="physics"><blockquote>The universe is under no obligation to make sense to you.</blockquote><cite>Neil deGrasse Tyson</cite></article>
+        <article class="quote-card" data-category="leadership"><blockquote>Ideas become leadership only when they help other people move.</blockquote><cite>Yash Gupta</cite></article>
+        <article class="quote-card" data-category="life"><blockquote>The best ideas live at the intersection of disciplines.</blockquote><cite>Portfolio note</cite></article>
+      </div>
+    </section>
+    <section class="section two-col">
+      <div class="fade-up"><p class="eyebrow">Suggest a Quote</p><h2 class="section-title">Send a line worth keeping.</h2></div>
+      <form class="form fade-up" id="quoteForm">
+        <label>Name<input name="name" required></label>
+        <label>Quote<textarea name="quote" required></textarea></label>
+        <label>Attribution<input name="attribution" required></label>
+        <button class="button primary" type="submit">Suggest Quote</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer"><span>Yash Gupta — Quotes</span><span class="rule"></span><span>Physics · Design · Leadership · Life</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

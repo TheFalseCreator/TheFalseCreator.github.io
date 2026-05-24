@@ -1,124 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" data-page="home">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yash Gupta portfolio: research, projects, art gallery, vision boards, leadership, and community work." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yash Gupta - researcher, innovator, student leader, 2D animator, and creative thinker from New Delhi.">
   <title>Yash Gupta | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="cursor-glow" id="cursorGlow"></div>
-  <nav class="site-nav" aria-label="Primary navigation">
-    <a class="brand" href="index.html">Yash <em>Gupta</em></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  <nav class="site-nav">
+    <a class="brand" href="index.html">Yash <em>G.</em></a>
     <div class="nav-links" id="navLinks">
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
-      <a href="gallery.html">Gallery/Art</a>
-      <a href="vision-boards.html">Vision Boards</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="visionboards.html">Vision Boards</a>
+      <a href="now.html">Now</a>
       <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light mode">◐</button>
+      <a class="resume-btn label" href="assets/Resume-Yash Gupta .pdf" download>↓ Resume</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </nav>
 
   <main>
-    <section class="hero split-hero">
-      <div class="fade-up">
-        <p class="eyebrow">Portfolio / New Delhi</p>
-        <h1>Yash<br><em>Gupta</em></h1>
-        <p class="tagline">High School Student / Researcher / Innovator / Visual Thinker</p>
-        <p class="hero-copy">
-          I build student-led work across sustainability, civic technology, health-tech, speculative physics, public speaking, community service, and visual storytelling.
-        </p>
+    <section class="hero centered">
+      <canvas id="heroCanvas" class="hero-canvas" data-parallax="0.12" aria-hidden="true"></canvas>
+      <div>
+        <h1 class="hero-title" data-parallax="0.3">YASH<br>GUPTA</h1>
+        <div class="descriptor" data-random-descriptor></div>
+        <p class="tagline">New Delhi · Researcher · Student Leader · 2026</p>
         <div class="hero-actions">
-          <a class="button primary" href="projects.html">Explore Projects</a>
-          <a class="button secondary" href="gallery.html">View Art</a>
+          <a class="button primary" href="projects.html">Explore Work</a>
+          <a class="button" href="now.html">Read My Thinking</a>
         </div>
       </div>
-
-      <aside class="hero-panel fade-up">
-        <p class="panel-kicker">Currently Building</p>
-        <h2>A portfolio where every project gets its own story.</h2>
-        <p>
-          Each project now has equal weight, a hover preview, and a full detail page for the idea, components, people, recognition, and next steps.
-        </p>
-        <div class="mini-grid">
-          <span>Research</span>
-          <span>Civic Design</span>
-          <span>Art</span>
-          <span>Vision Boards</span>
-        </div>
-      </aside>
     </section>
+
+    <div class="ticker-wrap" aria-label="Highlights ticker">
+      <div class="ticker">
+        <span>🥇 A.K. Saha State Competition · 🥇 Niamat Rai State Competition · 💰 INR 20K Humanistic Design Summit · 🌏 Flinders University Australia · 👑 Mr. Springdales · 🚀 Chandrayaan-3 Discussion · ⭐ All-Rounder Award</span>
+        <span>🥇 A.K. Saha State Competition · 🥇 Niamat Rai State Competition · 💰 INR 20K Humanistic Design Summit · 🌏 Flinders University Australia · 👑 Mr. Springdales · 🚀 Chandrayaan-3 Discussion · ⭐ All-Rounder Award</span>
+      </div>
+    </div>
 
     <section class="section">
       <div class="section-header fade-up">
-        <span>001</span>
-        <h2>Featured <em>Projects</em></h2>
+        <p class="label">003 — Selected Work</p>
+        <h2>Projects with <em>stories</em>, not just titles.</h2>
       </div>
-      <div class="masonry-grid fade-up">
-        <a class="project-card hover-preview" href="projects/biomass.html" data-preview="art-biomass">
-          <p class="project-kicker">Sustainability / Materials</p>
-          <h3>Green Designing of Biomass</h3>
-          <p>Biodegradable packaging from agricultural waste, designed to reduce pollution and create a better economic alternative for farmers.</p>
-          <div class="chip-row"><span>Biomass</span><span>Packaging</span><span>Prototype</span></div>
+      <div class="selected-work fade-up">
+        <a class="work-card work-main hover-preview" href="projects/biomass.html" data-preview="art-biomass">
+          <div>
+            <p class="kicker">Sustainability / Materials Science</p>
+            <h3>Green Designing of Biomass</h3>
+            <p>Biodegradable packaging from agricultural waste, built around pollution, farmer economics, and material experimentation.</p>
+            <div class="chip-row"><span>Biomass</span><span>Packaging</span><span>A.K. Saha</span></div>
+          </div>
+          <div class="art-tile art-biomass" aria-hidden="true"></div>
         </a>
-        <a class="project-card hover-preview" href="projects/raksita.html" data-preview="art-raksita">
-          <p class="project-kicker">Civic Technology</p>
-          <h3>Raksita</h3>
-          <p>Predictive modeling and sensor-based thinking for urban waterlogging and flood-risk response.</p>
-          <div class="chip-row"><span>Sensors</span><span>Urban</span><span>Forecasting</span></div>
+        <a class="work-card work-half hover-preview" href="projects/raksita.html" data-preview="art-raksita">
+          <p class="kicker">Civic Tech</p><h3>Raksita</h3><p>Predictive modelling and sensor logic for urban waterlogging response.</p><div class="chip-row"><span>Sensors</span><span>Water</span></div>
         </a>
-        <a class="project-card hover-preview" href="projects/neurohealth.html" data-preview="art-neuro">
-          <p class="project-kicker">Health Technology</p>
-          <h3>NeuroHealth</h3>
-          <p>A mental-health monitoring concept using EXG sensor signals to identify stress patterns earlier.</p>
-          <div class="chip-row"><span>EXG</span><span>Wellbeing</span><span>Support</span></div>
+        <a class="work-card work-half hover-preview" href="projects/neurohealth.html" data-preview="art-neuro">
+          <p class="kicker">Health Technology</p><h3>NeuroHealth</h3><p>EXG-based stress signature detection for timely mental-health support.</p><div class="chip-row"><span>EXG</span><span>INR 20K</span></div>
         </a>
-        <a class="project-card hover-preview" href="projects/cosmic-isolation.html" data-preview="art-cosmic">
-          <p class="project-kicker">Speculative Physics</p>
-          <h3>Cosmic Isolation</h3>
-          <p>A theoretical framework exploring a geometric counterpart to black holes in early-universe models.</p>
-          <div class="chip-row"><span>Cosmology</span><span>Spacetime</span><span>Theory</span></div>
+        <a class="work-card work-stagger-a hover-preview" href="projects/cosmic.html" data-preview="art-cosmic">
+          <p class="kicker">Physics</p><h3>Cosmic Isolation</h3><p>A speculative framework seeking academic collaboration with physics departments.</p><div class="chip-row"><span>Spacetime</span><span>Theory</span></div>
         </a>
-        <a class="project-card hover-preview" href="projects/sanitary-pad-initiative.html" data-preview="art-community">
-          <p class="project-kicker">Community Impact</p>
-          <h3>Sanitary Pad Machine Initiative</h3>
-          <p>A Rotary-supported hygiene project focused on fundraising, access, implementation, and student-led service.</p>
-          <div class="chip-row"><span>Hygiene</span><span>Funding</span><span>Service</span></div>
+        <a class="work-card work-stagger-b hover-preview" href="projects/sanitary.html" data-preview="art-sanitary">
+          <p class="kicker">Community</p><h3>Sanitary Pad Initiative</h3><p>Rotary-backed hygiene access work through funding, approvals, and installation.</p><div class="chip-row"><span>Access</span><span>Rotary</span></div>
         </a>
       </div>
+    </section>
+
+    <section class="quote-strip fade-up">
+      <blockquote data-random-quote></blockquote>
     </section>
 
     <section class="section two-col">
       <div class="fade-up">
-        <p class="eyebrow">Creative Work</p>
-        <h2 class="section-title">Gallery and vision boards are now separate spaces.</h2>
+        <p class="eyebrow">Living Document</p>
+        <h2 class="section-title">What is happening <em>now</em>.</h2>
       </div>
-      <div class="feature-list fade-up">
-        <a href="gallery.html">
-          <strong>Gallery/Art</strong>
-          <span>Material studies, animation, visual experiments, and research poster aesthetics.</span>
+      <div class="preview-stack fade-up">
+        <a class="card" href="now.html">
+          <p class="kicker">Now</p>
+          <h3>Working this month</h3>
+          <p>Building this portfolio as a complete research and creative archive, seeking physics mentors, preparing for Grade 12, and running Physics Club workshops.</p>
         </a>
-        <a href="vision-boards.html">
-          <strong>Vision Boards</strong>
-          <span>Goal maps, academic direction, project planning boards, and visual references.</span>
-        </a>
-        <a href="about.html">
-          <strong>About</strong>
-          <span>School, awards, leadership, public speaking, clubs, and community work.</span>
+        <a class="card" href="quotes.html">
+          <p class="kicker">Currently Thinking About</p>
+          <h3>Physics & Cosmology · Technology & AI · Design & Aesthetics</h3>
+          <p>A rotating set of ideas, quotes, and questions that shape how I build.</p>
         </a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <span>Yash Gupta - Portfolio</span>
-    <span>New Delhi / 2026</span>
+    <span>Yash Gupta — Portfolio · New Delhi</span>
+    <span class="rule"></span>
+    <span>TheFalseCreator.github.io</span>
   </footer>
   <script src="script.js"></script>
 </body>

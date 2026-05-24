@@ -1,32 +1,30 @@
-# Yash Gupta Portfolio
+# Yash Gupta Portfolio v4
 
-Static multi-page portfolio for GitHub Pages.
+Static GitHub Pages portfolio built with vanilla HTML, CSS, and JavaScript.
 
-## Pages
+## Structure
 
-- `index.html` - home page with featured project hover previews.
-- `about.html` - school, awards, leadership, speaking, and clubs.
-- `projects.html` - masonry project index.
-- `gallery.html` - art gallery page, separate from vision boards.
-- `vision-boards.html` - vision boards and future direction.
-- `contact.html` - contact details.
-- `projects/biomass.html` - Green Designing of Biomass story.
-- `projects/raksita.html` - Raksita story.
-- `projects/neurohealth.html` - NeuroHealth story.
-- `projects/cosmic-isolation.html` - Cosmic Isolation story.
-- `projects/sanitary-pad-initiative.html` - Sanitary Pad Machine Initiative story.
+- `index.html`
+- `about.html`
+- `projects.html`
+- `gallery.html`
+- `visionboards.html`
+- `now.html`
+- `quotes.html`
+- `research.html`
+- `contact.html`
+- `projects/biomass.html`
+- `projects/raksita.html`
+- `projects/neurohealth.html`
+- `projects/cosmic.html`
+- `projects/sanitary.html`
+- `style.css`
+- `script.js`
+- `assets/Resume-Yash Gupta .pdf`
 
-## Hover Previews
+## Notes
 
-Project cards use CSS placeholder art tiles for now. Each card has:
-
-```html
-class="project-card hover-preview"
-data-preview="art-biomass"
-```
-
-To swap in real images later, either replace the CSS art backgrounds in `style.css`, or convert the preview element to use actual image URLs.
-
-## Deploying On GitHub Pages
-
-Put these files in the repository root, then enable GitHub Pages from the `main` branch root. For a custom domain, add your domain in the GitHub Pages settings and configure your DNS records with your domain provider.
+- No frameworks, npm, build step, or external JavaScript libraries.
+- Project hover previews use CSS art classes through `data-preview`.
+- Gallery and vision board lightboxes use CSS art placeholders until real images are added.
+- Research PDFs can be activated by adding files to `assets/` and updating the card links in `research.html`.

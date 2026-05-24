@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Boards | Yash Gupta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <nav class="site-nav"><a class="brand" href="index.html">Yash <em>G.</em></a><div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="gallery.html">Gallery</a><a href="visionboards.html" aria-current="page">Vision Boards</a><a href="now.html">Now</a><a href="contact.html">Contact</a></div><div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle light mode">◐</button><a class="resume-btn label" href="assets/Resume-Yash Gupta .pdf" download>↓ Resume</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></div></nav>
+  <main>
+    <section class="hero page-hero"><div><p class="eyebrow">Vision Boards / Direction / Practice</p><h1 class="hero-title" data-parallax="0.3">VISION<br><em>BOARDS</em></h1><p class="hero-copy">A separate archive for goals, references, academic direction, design taste, and future project planning.</p></div></section>
+    <section class="section">
+      <!-- To add a real board image: replace .vb-art div with <img> tag -->
+      <div class="vb-grid fade-up">
+        <article class="vb-card" data-lightbox data-art="art-vision" data-title="Academic Direction" data-desc="Research mentorship, physics collaboration, stronger documentation, and university applications."><div class="art-tile art-vision vb-art"></div><div class="vb-body"><p class="kicker">2026</p><h3>Academic Direction</h3><p>Mentorship, research, writing, and admissions clarity.</p></div></article>
+        <article class="vb-card" data-lightbox data-art="art-biomass" data-title="Sustainability Track" data-desc="Circular economy, biomass materials, packaging, and farmer-centered design."><div class="art-tile art-biomass vb-art"></div><div class="vb-body"><p class="kicker">2025</p><h3>Sustainability Track</h3><p>Biomass, pollution, packaging, and climate ideas.</p></div></article>
+        <article class="vb-card" data-lightbox data-art="art-cosmic" data-title="Cosmic Isolation" data-desc="A visual planning board for diagrams, assumptions, and collaborator outreach."><div class="art-tile art-cosmic vb-art"></div><div class="vb-body"><p class="kicker">2025</p><h3>Cosmic Isolation</h3><p>Physics framework, diagrams, and mentor questions.</p></div></article>
+        <article class="vb-card" data-lightbox data-art="art-gallery" data-title="Creative Archive" data-desc="Animation, visual systems, poster style, and portfolio atmosphere."><div class="art-tile art-gallery vb-art"></div><div class="vb-body"><p class="kicker">2024</p><h3>Creative Archive</h3><p>Animation, posters, typography, and story language.</p></div></article>
+        <article class="vb-card placeholder"><div class="vb-body"><p class="kicker">Future</p><h3>[ Add Board ]</h3><p>Placeholder for the next vision board image and description.</p></div></article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header fade-up"><p class="label">How I Use Them</p><h2>A visual way to make ambition <em>specific</em>.</h2></div>
+      <div class="component-grid fade-up">
+        <article class="card"><h3>Collect</h3><p>I gather references from science, design, art, cities, and the people I admire.</p></article>
+        <article class="card"><h3>Cluster</h3><p>I group ideas by theme so goals become visible instead of floating around.</p></article>
+        <article class="card"><h3>Translate</h3><p>I turn mood and references into tasks, project pages, diagrams, and talks.</p></article>
+        <article class="card"><h3>Return</h3><p>I revisit boards when I need to remember what I said mattered.</p></article>
+      </div>
+    </section>
+  </main>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">✕</button><div id="lightboxArt" class="lightbox-art"></div><div class="lightbox-copy"><h2 id="lightboxTitle"></h2><p id="lightboxDesc"></p></div></div>
+  <footer class="footer"><span>Yash Gupta — Vision Boards</span><span class="rule"></span><span>Separate from Gallery</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

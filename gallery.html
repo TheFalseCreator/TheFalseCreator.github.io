@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" data-page="gallery">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery/Art | Yash Gupta</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Yash Gupta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="cursor-glow" id="cursorGlow"></div>
-  <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="index.html">Yash <em>Gupta</em></a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button><div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="gallery.html" aria-current="page">Gallery/Art</a><a href="vision-boards.html">Vision Boards</a><a href="contact.html">Contact</a></div></nav>
+  <nav class="site-nav"><a class="brand" href="index.html">Yash <em>G.</em></a><div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="gallery.html" aria-current="page">Gallery</a><a href="visionboards.html">Vision Boards</a><a href="now.html">Now</a><a href="contact.html">Contact</a></div><div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle light mode">◐</button><a class="resume-btn label" href="assets/Resume-Yash Gupta .pdf" download>↓ Resume</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></div></nav>
   <main>
-    <section class="hero page-hero"><div class="fade-up"><p class="eyebrow">Gallery / Art / Visual Thinking</p><h1>Art<br><em>Gallery</em></h1><p class="hero-copy">A separate archive for art, material studies, animation experiments, research poster aesthetics, and visual explorations. These are CSS placeholders for now so real images can be swapped in later.</p></div></section>
-    <section class="section"><div class="gallery-grid fade-up">
-      <article class="gallery-card"><div class="art-tile art-gallery"></div><div class="gallery-body"><h3>Material Studies</h3><p>Texture, paper, biomass, surface, and composite-inspired visual experiments.</p></div></article>
-      <article class="gallery-card"><div class="art-tile art-biomass"></div><div class="gallery-body"><h3>Research Posters</h3><p>Editorial layouts for communicating science, sustainability, and project evidence.</p></div></article>
-      <article class="gallery-card"><div class="art-tile art-neuro"></div><div class="gallery-body"><h3>2D Animation</h3><p>Animation and visual storytelling connected to the Future Creatives recognition.</p></div></article>
-      <article class="gallery-card"><div class="art-tile art-cosmic"></div><div class="gallery-body"><h3>Speculative Visuals</h3><p>Graphic studies for physics, space, and abstract systems thinking.</p></div></article>
-      <article class="gallery-card"><div class="art-tile art-raksita"></div><div class="gallery-body"><h3>Civic Diagrams</h3><p>Maps, flows, and diagrams for city-scale problems like waterlogging.</p></div></article>
-      <article class="gallery-card"><div class="art-tile art-community"></div><div class="gallery-body"><h3>Community Archive</h3><p>Visual placeholders for service work, events, and implementation stories.</p></div></article>
-    </div></section>
+    <section class="hero page-hero"><div><p class="eyebrow">Art / Animation / Visual Research</p><h1 class="hero-title" data-parallax="0.3">GALLERY</h1><p class="hero-copy">A separate page for visual work: material studies, animation, research posters, and photography placeholders.</p></div></section>
+    <section class="section" data-filter-group>
+      <!-- To add a real photo: replace .gi-art div with <img class="gi-photo" src="assets/..."> -->
+      <div class="filter-tabs fade-up"><button class="active" data-filter="all">All</button><button data-filter="material">Material Studies</button><button data-filter="animation">Animation</button><button data-filter="poster">Research Posters</button><button data-filter="photo">Photography</button></div>
+      <div class="gallery-columns fade-up">
+        <article class="gallery-item" data-lightbox data-art="art-biomass" data-category="material" data-title="Biomass Texture Study" data-desc="A placeholder for future scans or photos of material and composite experiments."><div class="art-tile art-biomass gi-art"></div><div class="gallery-body"><p class="kicker">Material Studies</p><h3>Biomass Texture Study</h3><p>Fibers, sheets, tactility, and waste-to-resource thinking.</p></div></article>
+        <article class="gallery-item" data-lightbox data-art="art-gallery" data-category="animation" data-title="2D Animation Frame Language" data-desc="A placeholder for animation stills from Flinders University Future Creatives work."><div class="art-tile art-gallery gi-art"></div><div class="gallery-body"><p class="kicker">Animation</p><h3>2D Animation</h3><p>Motion, character, timing, and visual storytelling.</p></div></article>
+        <article class="gallery-item" data-lightbox data-art="art-raksita" data-category="poster" data-title="Civic Research Poster" data-desc="A future research poster slot for civic technology and waterlogging diagrams."><div class="art-tile art-raksita gi-art"></div><div class="gallery-body"><p class="kicker">Research Posters</p><h3>Civic Systems Poster</h3><p>Water, cities, alerts, and infrastructure diagrams.</p></div></article>
+        <article class="gallery-item" data-lightbox data-art="art-neuro" data-category="poster" data-title="NeuroHealth Design Poster" data-desc="A placeholder for a mental-health technology poster and sensor-flow visualization."><div class="art-tile art-neuro gi-art"></div><div class="gallery-body"><p class="kicker">Research Posters</p><h3>Signal + Care</h3><p>Sensor flows for stress, support, and response.</p></div></article>
+        <article class="gallery-item" data-lightbox data-art="art-cosmic" data-category="material" data-title="Cosmic Diagram Study" data-desc="Graphic studies for spacetime, expansion, and theoretical models."><div class="art-tile art-cosmic gi-art"></div><div class="gallery-body"><p class="kicker">Material Studies</p><h3>Cosmic Diagram Study</h3><p>Abstract visuals for physics thinking.</p></div></article>
+        <article class="gallery-item" data-lightbox data-art="art-sanitary" data-category="photo" data-title="Community Documentation" data-desc="A placeholder for future event and implementation photographs."><div class="art-tile art-sanitary gi-art"></div><div class="gallery-body"><p class="kicker">Photography</p><h3>Community Archive</h3><p>Event documentation and implementation moments.</p></div></article>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><span>Yash Gupta - Gallery/Art</span><span>CSS placeholders ready for photos</span></footer>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">✕</button><div id="lightboxArt" class="lightbox-art"></div><div class="lightbox-copy"><h2 id="lightboxTitle"></h2><p id="lightboxDesc"></p></div></div>
+  <footer class="footer"><span>Yash Gupta — Gallery</span><span class="rule"></span><span>CSS art now · real photos later</span></footer>
   <script src="script.js"></script>
 </body>
 </html>

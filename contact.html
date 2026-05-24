@@ -1,26 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" data-page="contact">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Yash Gupta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="cursor-glow" id="cursorGlow"></div>
-  <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="index.html">Yash <em>Gupta</em></a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button><div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="gallery.html">Gallery/Art</a><a href="vision-boards.html">Vision Boards</a><a href="contact.html" aria-current="page">Contact</a></div></nav>
+  <nav class="site-nav"><a class="brand" href="index.html">Yash <em>G.</em></a><div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="gallery.html">Gallery</a><a href="visionboards.html">Vision Boards</a><a href="now.html">Now</a><a href="contact.html" aria-current="page">Contact</a></div><div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle light mode">◐</button><a class="resume-btn label" href="assets/Resume-Yash Gupta .pdf" download>↓ Resume</a><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></div></nav>
   <main>
-    <section class="hero page-hero"><div class="fade-up"><p class="eyebrow">Contact / Collaboration</p><h1>Let's<br><em>Connect</em></h1><p class="hero-copy">I am open to academic collaboration, mentorship, STEM opportunities, community initiatives, and conversations around sustainability, civic technology, visual storytelling, and speculative physics.</p></div></section>
-    <section class="section"><div class="contact-grid fade-up">
-      <article class="contact-card"><h3>Email</h3><p><a href="mailto:theyashgupta00@gmail.com">theyashgupta00@gmail.com</a></p></article>
-      <article class="contact-card"><h3>Phone</h3><p><a href="tel:+919811132864">+91 9811132864</a></p></article>
-      <article class="contact-card"><h3>GitHub</h3><p><a href="https://github.com/TheFalseCreator" target="_blank" rel="noreferrer">github.com/TheFalseCreator</a></p></article>
-      <article class="contact-card"><h3>Location</h3><p>New Delhi, India</p></article>
-    </div></section>
+    <section class="hero page-hero"><div><p class="eyebrow">Contact / Collaboration / Mentorship</p><h1 class="hero-title" data-parallax="0.3">LET'S<br><em>CONNECT</em></h1></div></section>
+    <section class="section contact-layout">
+      <div class="fade-up">
+        <h2 class="section-title">Let's <em>Connect</em></h2>
+        <p class="contact-note" style="margin-top:28px;">Open to research collaboration, mentorship, STEM opportunities, speaking invitations, scholarship recommendations, internships, and conversations that help turn serious student work into something larger.</p>
+        <div class="preview-stack" style="margin-top:28px;">
+          <a class="contact-card" href="mailto:theyashgupta00@gmail.com"><h3>Email</h3><p>theyashgupta00@gmail.com</p></a>
+          <a class="contact-card" href="tel:+919811132864"><h3>Phone</h3><p>+91 9811132864</p></a>
+          <a class="contact-card" href="https://github.com/TheFalseCreator" target="_blank" rel="noreferrer"><h3>GitHub</h3><p>github.com/TheFalseCreator</p></a>
+          <div class="contact-card"><h3>Location</h3><p>16, Shri Ram Road, Civil Lines, New Delhi – 110054</p></div>
+        </div>
+      </div>
+      <form class="form fade-up" id="contactForm">
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Subject<select name="subject" required><option>Research Collaboration</option><option>Speaking Invitation</option><option>Scholarship</option><option>Internship</option><option>General</option><option>Other</option></select></label>
+        <label>Message<textarea name="message" required></textarea></label>
+        <button class="button primary" type="submit">Send Message</button>
+        <p class="success" id="formSuccess">Opening your email app. No backend is used; this form uses a mailto fallback.</p>
+        <p class="meta">Response time: usually within 48 hours</p>
+        <!-- Formspree can be added later by replacing the mailto fallback in script.js. -->
+      </form>
+    </section>
   </main>
-  <footer class="footer"><span>Yash Gupta - Contact</span><span>New Delhi, India</span></footer>
+  <footer class="footer"><span>Yash Gupta — Contact</span><span class="rule"></span><span>New Delhi</span></footer>
   <script src="script.js"></script>
 </body>
 </html>
