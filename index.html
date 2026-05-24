@@ -1,599 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-page="home">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yash Gupta — High School Student, Researcher, Innovator & Student Leader from New Delhi." />
+  <meta name="description" content="Yash Gupta portfolio: research, projects, art gallery, vision boards, leadership, and community work." />
   <title>Yash Gupta | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- CURSOR GLOW -->
   <div class="cursor-glow" id="cursorGlow"></div>
-
-  <!-- NAV -->
-  <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
-    <a class="brand" href="#top">Yash <em>Gupta</em></a>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#achievements">Awards</a></li>
-      <li><a href="#speaking">Speaking</a></li>
-      <li><a href="#leadership">Leadership</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
-        <span class="theme-icon">◐</span>
-      </button>
-      <a class="resume-btn" href="assets/Yash_Gupta_Resume.pdf" download>↓ Resume</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html">Yash <em>Gupta</em></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery/Art</a>
+      <a href="vision-boards.html">Vision Boards</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#achievements">Awards</a></li>
-      <li><a href="#speaking">Speaking</a></li>
-      <li><a href="#leadership">Leadership</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a class="resume-btn" href="assets/Yash_Gupta_Resume.pdf" download>↓ Download Resume</a>
-  </div>
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-
-  <main id="top">
-
-    <!-- ═══ HERO ═══ -->
-    <section class="hero">
-      <div class="hero-left fade-up">
-        <div class="eyebrow">001 — Portfolio / New Delhi</div>
-        <h1 class="hero-name">
-          <span class="typewriter" id="typewriter"></span>
-        </h1>
-        <p class="tagline">High School Student &nbsp;·&nbsp; Researcher &nbsp;·&nbsp; Student Leader</p>
+  <main>
+    <section class="hero split-hero">
+      <div class="fade-up">
+        <p class="eyebrow">Portfolio / New Delhi</p>
+        <h1>Yash<br><em>Gupta</em></h1>
+        <p class="tagline">High School Student / Researcher / Innovator / Visual Thinker</p>
         <p class="hero-copy">
-          I build at the intersection of sustainability, technology, community service, and creative problem-solving — from biodegradable materials to speculative cosmology, mental-health tech, and visual storytelling.
+          I build student-led work across sustainability, civic technology, health-tech, speculative physics, public speaking, community service, and visual storytelling.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+          <a class="button primary" href="projects.html">Explore Projects</a>
+          <a class="button secondary" href="gallery.html">View Art</a>
         </div>
       </div>
 
-      <div class="hero-right fade-up delay-1">
-        <div class="spotlight-card">
-          <div class="spotlight-label">Currently Working On</div>
-          <h2>Research, civic design & a sharper creative archive.</h2>
-          <p>This portfolio is a living record of projects, experiments, recognition, and future collaborations.</p>
-          <ul class="focus-list">
-            <li>Seeking academic collaboration for the Cosmic Isolation framework</li>
-            <li>Documenting sustainability prototypes with clearer evidence</li>
-            <li>Building an art and visual-thinking gallery alongside technical work</li>
-          </ul>
+      <aside class="hero-panel fade-up">
+        <p class="panel-kicker">Currently Building</p>
+        <h2>A portfolio where every project gets its own story.</h2>
+        <p>
+          Each project now has equal weight, a hover preview, and a full detail page for the idea, components, people, recognition, and next steps.
+        </p>
+        <div class="mini-grid">
+          <span>Research</span>
+          <span>Civic Design</span>
+          <span>Art</span>
+          <span>Vision Boards</span>
         </div>
-        <div class="quick-grid">
-          <div class="quick-item"><strong>Delhi</strong><span>Springdales School</span></div>
-          <div class="quick-item"><strong>4 Domains</strong><span>STEM / Design / Service / Arts</span></div>
-          <div class="quick-item"><strong>Open</strong><span>Mentorship & collaboration</span></div>
-        </div>
-      </div>
+      </aside>
     </section>
 
-    <!-- ═══ ABOUT ═══ -->
-    <section id="about" class="section">
+    <section class="section">
       <div class="section-header fade-up">
-        <span class="section-num">002</span>
-        <h2 class="section-title">About <em>Me</em></h2>
-        <div class="section-rule"></div>
+        <span>001</span>
+        <h2>Featured <em>Projects</em></h2>
       </div>
-
-      <div class="about-grid fade-up">
-        <div>
-          <p class="lead">
-            I'm a high school student at <strong>Springdales School, Pusa Road, New Delhi</strong> (2014–2026), with a strong interest in interdisciplinary research, innovation, leadership, and community impact. My projects begin with a practical problem: pollution, waterlogging, student wellbeing, access to hygiene, or how young people engage with science.
-          </p>
-          <p class="lead" style="margin-top:1.2em;">
-            Beyond the lab, I explore <strong>art, animation, vision boards</strong>, and creative work — believing the best ideas live at the intersection of disciplines. I was awarded the title of <strong>Mr. Springdales</strong>, the top all-round personality title at my school.
-          </p>
-        </div>
-        <div class="stats-grid">
-          <div class="stat">
-            <div class="stat-number counter" data-target="88.6" data-decimals="1" data-suffix="%">0%</div>
-            <div class="stat-label">Class 10 Score</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number counter" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Projects</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number" style="font-size:2.8rem;">1st</div>
-            <div class="stat-label">State Competition Wins</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number counter" data-target="2026">2014</div>
-            <div class="stat-label">Graduating Year</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ PROJECTS ═══ -->
-    <section id="projects" class="section">
-      <div class="section-header fade-up">
-        <span class="section-num">003</span>
-        <h2 class="section-title">Selected <em>Projects</em></h2>
-        <div class="section-rule"></div>
-      </div>
-
-      <div class="project-grid fade-up">
-
-        <article class="project-card featured">
-          <div class="project-card-inner">
-            <div class="project-kicker">Sustainability / Materials Science</div>
-            <h3>Green Designing of Biomass</h3>
-            <p>Created biodegradable packaging from agricultural waste to reduce Delhi's stubble-burning air pollution and empower farmers. Also independently discovered a conductive composite material by combining pollution-derived particulates with biomass substrate, inspired by pollution-to-ink research.</p>
-            <div class="project-badge">🥇 1st — Dr. A.K. Saha State Competition</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Biomass</span>
-            <span class="tag">Packaging</span>
-            <span class="tag">Circular Economy</span>
-            <span class="tag">Conductivity</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card-inner">
-            <div class="project-kicker">Civic Technology</div>
-            <h3>Raksita</h3>
-            <p>A cutting-edge solution for urban waterlogging using predictive modelling and real-time sensors to prevent infrastructure damage and flooding in Delhi.</p>
-            <div class="project-badge">🥇 1st — Niamat Rai State Competition</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Sensors</span>
-            <span class="tag">Prediction</span>
-            <span class="tag">Urban Tech</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card-inner">
-            <div class="project-kicker">Health Technology</div>
-            <h3>NeuroHealth</h3>
-            <p>A mental-health monitoring system integrating EXG sensors to detect stress patterns and provide timely support for high-stress individuals.</p>
-            <div class="project-badge">💰 INR 20K — Humanistic Design Summit 2</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">EXG Sensors</span>
-            <span class="tag">Mental Health</span>
-            <span class="tag">Wearables</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card-inner">
-            <div class="project-kicker">Physics / Theoretical Research</div>
-            <h3>Cosmic Isolation</h3>
-            <p>Proposed Cosmic Isolation as a geometric counterpart to black holes in early-universe models — exploring spacetime structure, expansion, and an alternative to singularities.</p>
-            <div class="project-badge">🔭 Seeking academic collaboration</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Cosmology</span>
-            <span class="tag">Spacetime</span>
-            <span class="tag">Theoretical Physics</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card-inner">
-            <div class="project-kicker">Community Impact</div>
-            <h3>Sanitary Pad Machine Initiative</h3>
-            <p>Independently launched a sanitary pad machine installation project through Rotary Club, securing funding and setting a benchmark for student-led welfare initiatives in Delhi.</p>
-            <div class="project-badge">🏅 Rotary National Recognition</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Hygiene</span>
-            <span class="tag">Service</span>
-            <span class="tag">Fundraising</span>
-          </div>
-        </article>
-
+      <div class="masonry-grid fade-up">
+        <a class="project-card hover-preview" href="projects/biomass.html" data-preview="art-biomass">
+          <p class="project-kicker">Sustainability / Materials</p>
+          <h3>Green Designing of Biomass</h3>
+          <p>Biodegradable packaging from agricultural waste, designed to reduce pollution and create a better economic alternative for farmers.</p>
+          <div class="chip-row"><span>Biomass</span><span>Packaging</span><span>Prototype</span></div>
+        </a>
+        <a class="project-card hover-preview" href="projects/raksita.html" data-preview="art-raksita">
+          <p class="project-kicker">Civic Technology</p>
+          <h3>Raksita</h3>
+          <p>Predictive modeling and sensor-based thinking for urban waterlogging and flood-risk response.</p>
+          <div class="chip-row"><span>Sensors</span><span>Urban</span><span>Forecasting</span></div>
+        </a>
+        <a class="project-card hover-preview" href="projects/neurohealth.html" data-preview="art-neuro">
+          <p class="project-kicker">Health Technology</p>
+          <h3>NeuroHealth</h3>
+          <p>A mental-health monitoring concept using EXG sensor signals to identify stress patterns earlier.</p>
+          <div class="chip-row"><span>EXG</span><span>Wellbeing</span><span>Support</span></div>
+        </a>
+        <a class="project-card hover-preview" href="projects/cosmic-isolation.html" data-preview="art-cosmic">
+          <p class="project-kicker">Speculative Physics</p>
+          <h3>Cosmic Isolation</h3>
+          <p>A theoretical framework exploring a geometric counterpart to black holes in early-universe models.</p>
+          <div class="chip-row"><span>Cosmology</span><span>Spacetime</span><span>Theory</span></div>
+        </a>
+        <a class="project-card hover-preview" href="projects/sanitary-pad-initiative.html" data-preview="art-community">
+          <p class="project-kicker">Community Impact</p>
+          <h3>Sanitary Pad Machine Initiative</h3>
+          <p>A Rotary-supported hygiene project focused on fundraising, access, implementation, and student-led service.</p>
+          <div class="chip-row"><span>Hygiene</span><span>Funding</span><span>Service</span></div>
+        </a>
       </div>
     </section>
 
-    <!-- ═══ GALLERY ═══ -->
-    <section id="gallery" class="section">
-      <div class="section-header fade-up">
-        <span class="section-num">004</span>
-        <h2 class="section-title">Art <em>Gallery</em></h2>
-        <div class="section-rule"></div>
+    <section class="section two-col">
+      <div class="fade-up">
+        <p class="eyebrow">Creative Work</p>
+        <h2 class="section-title">Gallery and vision boards are now separate spaces.</h2>
       </div>
-      <p class="gallery-intro fade-up">A visual archive for art, design thinking, vision boards, animation, and image-making that helps technical ideas become easier to understand.</p>
-
-      <div class="gallery-grid fade-up">
-
-        <article class="gallery-card" data-lightbox
-          data-title="Material Studies"
-          data-desc="Texture-driven pieces inspired by biomass, paper fibers, composite surfaces, and waste-to-resource research.">
-          <div class="art-tile art-one"></div>
-          <div class="gallery-body">
-            <h3>Material Studies</h3>
-            <p>Texture & biomass-inspired visual explorations.</p>
-          </div>
-          <div class="gallery-overlay"><span>View</span></div>
-        </article>
-
-        <article class="gallery-card" data-lightbox
-          data-title="Vision Boards"
-          data-desc="Curated visual maps for goals, references, future projects, and the mood of long-term creative direction.">
-          <div class="art-tile art-two"></div>
-          <div class="gallery-body">
-            <h3>Vision Boards</h3>
-            <p>Curated visual maps for goals and future projects.</p>
-          </div>
-          <div class="gallery-overlay"><span>View</span></div>
-        </article>
-
-        <article class="gallery-card" data-lightbox
-          data-title="2D Animation"
-          data-desc="Internationally recognized animation work — 1st Place at Flinders University Future Creatives, Australia, representing India.">
-          <div class="art-tile art-three"></div>
-          <div class="gallery-body">
-            <h3>2D Animation</h3>
-            <p>🥇 Flinders University Future Creatives, Australia.</p>
-          </div>
-          <div class="gallery-overlay"><span>View</span></div>
-        </article>
-
-        <article class="gallery-card" data-lightbox
-          data-title="Research Posters"
-          data-desc="Editorial layouts and presentation systems for explaining science, civic design, and speculative physics.">
-          <div class="art-tile art-four"></div>
-          <div class="gallery-body">
-            <h3>Research Posters</h3>
-            <p>Editorial layouts for science and civic design.</p>
-          </div>
-          <div class="gallery-overlay"><span>View</span></div>
-        </article>
-
+      <div class="feature-list fade-up">
+        <a href="gallery.html">
+          <strong>Gallery/Art</strong>
+          <span>Material studies, animation, visual experiments, and research poster aesthetics.</span>
+        </a>
+        <a href="vision-boards.html">
+          <strong>Vision Boards</strong>
+          <span>Goal maps, academic direction, project planning boards, and visual references.</span>
+        </a>
+        <a href="about.html">
+          <strong>About</strong>
+          <span>School, awards, leadership, public speaking, clubs, and community work.</span>
+        </a>
       </div>
     </section>
-
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
-      <div class="lightbox-content">
-        <div class="lightbox-art" id="lightboxArt"></div>
-        <div class="lightbox-info">
-          <h3 id="lightboxTitle"></h3>
-          <p id="lightboxDesc"></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══ ACHIEVEMENTS ═══ -->
-    <section id="achievements" class="section">
-      <div class="section-header fade-up">
-        <span class="section-num">005</span>
-        <h2 class="section-title">Awards &amp; <em>Recognition</em></h2>
-        <div class="section-rule"></div>
-      </div>
-
-      <div class="award-list fade-up">
-        <article class="award-row">
-          <div class="award-meta">Grade 11</div>
-          <div class="award-body">
-            <h3>1st Position — Dr. A.K. Saha State Competition</h3>
-            <p>Recognized for the pioneering Green Designing of Biomass project, emphasizing sustainability and innovation.</p>
-          </div>
-          <div class="award-pos">🥇 1st</div>
-        </article>
-        <article class="award-row">
-          <div class="award-meta">Grade 11</div>
-          <div class="award-body">
-            <h3>1st Position — Niamat Rai State Competition</h3>
-            <p>Developed and presented Raksita — a solution addressing urban waterlogging issues.</p>
-          </div>
-          <div class="award-pos">🥇 1st</div>
-        </article>
-        <article class="award-row">
-          <div class="award-meta">Grade 11</div>
-          <div class="award-body">
-            <h3>Excellence in Problem Identification — Humanistic Design Summit 2</h3>
-            <p>Awarded INR 20,000 Pan India for NeuroHealth — mental health challenges through tech innovation.</p>
-          </div>
-          <div class="award-pos">💰 ₹20K</div>
-        </article>
-        <article class="award-row">
-          <div class="award-meta">Grade 11</div>
-          <div class="award-body">
-            <h3>1st in 2D Animation — Flinders University Future Creatives, Australia</h3>
-            <p>Represented India internationally; 1st in animation, runner-up overall while collaborating with global academic leaders.</p>
-          </div>
-          <div class="award-pos">🌏 Intl.</div>
-        </article>
-        <article class="award-row">
-          <div class="award-meta">Grade 12</div>
-          <div class="award-body">
-            <h3>Mr. Springdales</h3>
-            <p>Awarded the top all-round personality title at Springdales School through evaluation rounds including stage interaction, questioning, and performance.</p>
-          </div>
-          <div class="award-pos">👑 Title</div>
-        </article>
-        <article class="award-row">
-          <div class="award-meta">Grade 11</div>
-          <div class="award-body">
-            <h3>Dr. Sharda Agarwal Memorial Running Trophy</h3>
-            <p>Awarded for Design Thinking and Innovation at Springdales School.</p>
-          </div>
-          <div class="award-pos">🏆</div>
-        </article>
-        <article class="award-row">
-          <div class="award-meta">Grade 10</div>
-          <div class="award-body">
-            <h3>Vision Quest 4 — STEM Recognition & Chandrayaan-3</h3>
-            <p>Recognized for excellence in STEM; selected for an exclusive discussion with Mr. M. Srikanth, Director of India's Chandrayaan-3 mission.</p>
-          </div>
-          <div class="award-pos">🚀</div>
-        </article>
-        <article class="award-row">
-          <div class="award-meta">Grades 1–8</div>
-          <div class="award-body">
-            <h3>All-Rounder Academic Award Winner</h3>
-            <p>Consistently recognized across multiple years for academic excellence and all-round performance.</p>
-          </div>
-          <div class="award-pos">⭐</div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ═══ SPEAKING ═══ -->
-    <section id="speaking" class="section">
-      <div class="section-header fade-up">
-        <span class="section-num">006</span>
-        <h2 class="section-title">Speaking &amp; <em>Presence</em></h2>
-        <div class="section-rule"></div>
-      </div>
-      <div class="speaking-grid fade-up">
-        <article class="speaking-card">
-          <div class="speaking-num">01</div>
-          <h3>Citation Ceremony Host</h3>
-          <p>Among two students chosen to host the prestigious Citation Ceremony at Springdales, attended by the Director of Education, Delhi. Contributed through oratory and event coordination.</p>
-        </article>
-        <article class="speaking-card">
-          <div class="speaking-num">02</div>
-          <h3>Rotary Club National Address</h3>
-          <p>Led a Rotary Club initiative and addressed national leaders and school leadership, building collaboration around community engagement and welfare.</p>
-        </article>
-        <article class="speaking-card">
-          <div class="speaking-num">03</div>
-          <h3>ITIHAAS Summit 2025</h3>
-          <p>Represented Springdales at the national ITIHAAS Summit on "Learning Spaces," engaging with Shri Asim Arun and Sonam Wangchuk. Assisted in documenting key insights.</p>
-        </article>
-        <article class="speaking-card">
-          <div class="speaking-num">04</div>
-          <h3>TEDx Participation</h3>
-          <p>Represented Springdales School at Cambridge School, Srinivaspuri, as a participant in the TEDx event (2024–25).</p>
-        </article>
-        <article class="speaking-card">
-          <div class="speaking-num">05</div>
-          <h3>IIT Delhi — AI & ML Workshop</h3>
-          <p>Selected participant in the Artificial Intelligence and Machine Learning workshop at IIT Delhi — TRYST 2024. Developed introductory understanding of ML workflows and AI applications.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ═══ LEADERSHIP ═══ -->
-    <section id="leadership" class="section">
-      <div class="section-header fade-up">
-        <span class="section-num">007</span>
-        <h2 class="section-title">Leadership &amp; <em>Clubs</em></h2>
-        <div class="section-rule"></div>
-      </div>
-      <div class="club-list fade-up">
-        <article class="club-row">
-          <div class="award-meta">Grade 12</div>
-          <div>
-            <h3>Prefect, Student Council Leader</h3>
-            <p>Selected as senior student leader to uphold discipline, mentor peers, and represent the student body. Key role in decision-making, event planning, and school culture.</p>
-          </div>
-        </article>
-        <article class="club-row">
-          <div class="award-meta">Gr. 10–11</div>
-          <div>
-            <h3>Council Member & House Coordinator</h3>
-            <p>Coordinated inter-house activities, mentored younger students, and fostered unity across academic, cultural, and sports domains.</p>
-          </div>
-        </article>
-        <article class="club-row">
-          <div class="award-meta">2024–25</div>
-          <div>
-            <h3>Interact Club — Club Director</h3>
-            <p>Organised welfare initiatives including blood donation drives and programs for underprivileged children.</p>
-          </div>
-        </article>
-        <article class="club-row">
-          <div class="award-meta">2024–25</div>
-          <div>
-            <h3>Rotary Club — Domain Leader</h3>
-            <p>Led the Water Management and Hygiene domain, implementing sustainability-focused projects.</p>
-          </div>
-        </article>
-        <article class="club-row">
-          <div class="award-meta">2024–25</div>
-          <div>
-            <h3>Physics Club — Founder</h3>
-            <p>Initiated the club and led workshops helping students explore advanced concepts in physics and innovation.</p>
-          </div>
-        </article>
-        <article class="club-row">
-          <div class="award-meta">2023–25</div>
-          <div>
-            <h3>Innovishkar Club — Vice President</h3>
-            <p>Directed STEM projects and mentored peers in design thinking, prototyping, and creative problem-solving.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ═══ COMMUNITY ═══ -->
-    <section id="community" class="section">
-      <div class="section-header fade-up">
-        <span class="section-num">008</span>
-        <h2 class="section-title">Community <em>Work</em></h2>
-        <div class="section-rule"></div>
-      </div>
-      <div class="impact-grid fade-up">
-        <article class="impact-card">
-          <h3>Earth Saviors Foundation</h3>
-          <p>Earned lifetime membership after assisting senior citizens and disabled individuals, organising fundraising for medicines and clothing, and connecting beneficiaries to government welfare schemes.</p>
-        </article>
-        <article class="impact-card">
-          <h3>Ashok Sawhney Foundation</h3>
-          <p>Received community service recognition in 2025 for dedicated service, compassion, and meaningful engagement with senior citizens at an old-age home.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ═══ SKILLS ═══ -->
-    <section id="skills" class="section">
-      <div class="section-header fade-up">
-        <span class="section-num">009</span>
-        <h2 class="section-title">Skills &amp; <em>Tools</em></h2>
-        <div class="section-rule"></div>
-      </div>
-      <div class="skills-grid fade-up">
-        <div class="skill-block">
-          <h3>Research</h3>
-          <div class="skill-bar-list">
-            <div class="skill-bar-item">
-              <span>Interdisciplinary Research</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Scientific Writing</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Experimental Design</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h3>Technology</h3>
-          <div class="skill-bar-list">
-            <div class="skill-bar-item">
-              <span>Python</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Web Development</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Java / SQL</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h3>Communication</h3>
-          <div class="skill-bar-list">
-            <div class="skill-bar-item">
-              <span>Public Speaking</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Leadership</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Team Collaboration</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h3>Creative</h3>
-          <div class="skill-bar-list">
-            <div class="skill-bar-item">
-              <span>2D Animation</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Visual Design</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="74"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <span>Presentation</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ CONTACT ═══ -->
-    <section id="contact" class="section">
-      <div class="section-header fade-up">
-        <span class="section-num">010</span>
-        <h2 class="section-title">Get in <em>Touch</em></h2>
-        <div class="section-rule"></div>
-      </div>
-      <div class="contact-grid fade-up">
-        <div>
-          <h2 class="contact-title">Let's<br><em>Connect</em></h2>
-          <p class="contact-note">Open to academic collaboration, research mentorship, STEM opportunities, community initiatives, and conversations around sustainability, civic technology, and student-led innovation.</p>
-          <div class="contact-links">
-            <a href="mailto:theyashgupta00@gmail.com">
-              <span class="contact-dot"></span>theyashgupta00@gmail.com
-            </a>
-            <a href="tel:+919811132864">
-              <span class="contact-dot"></span>+91 9811132864
-            </a>
-            <a href="https://github.com/TheFalseCreator" target="_blank" rel="noreferrer">
-              <span class="contact-dot"></span>github.com/TheFalseCreator
-            </a>
-            <span>
-              <span class="contact-dot"></span>New Delhi, India — 110054
-            </span>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm">
-          <input type="text" placeholder="Your name" required autocomplete="name" />
-          <input type="email" placeholder="Your email" required autocomplete="email" />
-          <input type="text" placeholder="Subject" />
-          <textarea rows="5" placeholder="Your message"></textarea>
-          <button type="submit" class="btn btn-primary">Send Message →</button>
-          <p class="form-success" id="formSuccess">Message sent! I'll get back to you soon.</p>
-        </form>
-      </div>
-    </section>
-
   </main>
 
-  <footer>
-    <div class="footer-left">Yash Gupta — Portfolio</div>
-    <div class="footer-right">New Delhi · 2026</div>
+  <footer class="footer">
+    <span>Yash Gupta - Portfolio</span>
+    <span>New Delhi / 2026</span>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>

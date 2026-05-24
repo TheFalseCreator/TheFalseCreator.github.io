@@ -1,61 +1,32 @@
-# Yash Gupta — Portfolio
+# Yash Gupta Portfolio
 
-Personal portfolio website hosted on GitHub Pages.
+Static multi-page portfolio for GitHub Pages.
 
-## File Structure
+## Pages
 
-```
-/
-├── index.html          ← Main HTML (all sections)
-├── style.css           ← All styles + light/dark theme
-├── script.js           ← All interactivity
-└── assets/
-    └── Yash_Gupta_Resume.pdf   ← Drop your resume PDF here
-```
+- `index.html` - home page with featured project hover previews.
+- `about.html` - school, awards, leadership, speaking, and clubs.
+- `projects.html` - masonry project index.
+- `gallery.html` - art gallery page, separate from vision boards.
+- `vision-boards.html` - vision boards and future direction.
+- `contact.html` - contact details.
+- `projects/biomass.html` - Green Designing of Biomass story.
+- `projects/raksita.html` - Raksita story.
+- `projects/neurohealth.html` - NeuroHealth story.
+- `projects/cosmic-isolation.html` - Cosmic Isolation story.
+- `projects/sanitary-pad-initiative.html` - Sanitary Pad Machine Initiative story.
 
-## GitHub Setup (step-by-step)
+## Hover Previews
 
-### 1. Add your resume PDF
-- Place your resume PDF inside the `assets/` folder
-- Make sure the filename is exactly: `Yash_Gupta_Resume.pdf`
-- The nav "↓ Resume" button will link to it automatically
+Project cards use CSS placeholder art tiles for now. Each card has:
 
-### 2. Push to GitHub
-```bash
-git add .
-git commit -m "Portfolio v3 — separated HTML/CSS/JS"
-git push origin main
+```html
+class="project-card hover-preview"
+data-preview="art-biomass"
 ```
 
-### 3. Your custom domain
-- Already set up via your CNAME file — no changes needed
-- GitHub Pages will serve your `index.html` automatically
+To swap in real images later, either replace the CSS art backgrounds in `style.css`, or convert the preview element to use actual image URLs.
 
-## Customisation Checklist
+## Deploying On GitHub Pages
 
-- [ ] Add your photo (optional) — replace any `.art-tile` with an `<img>` tag
-- [ ] Update `assets/Yash_Gupta_Resume.pdf` with your latest resume
-- [ ] Add real gallery images — swap the CSS art tiles with `<img src="...">` inside `.art-tile`
-- [ ] Add more projects — duplicate any `.project-card` block in `index.html`
-- [ ] Add more awards — duplicate `.award-row` blocks
-- [ ] Update skill bar percentages — change `data-width="XX"` on each `.skill-fill`
-- [ ] For the contact form to actually send emails, integrate [Formspree](https://formspree.io):
-  - Create a free account at formspree.io
-  - Get your form endpoint (looks like `https://formspree.io/f/xxxxxxxx`)
-  - Change `<form class="contact-form" id="contactForm">` to `<form action="https://formspree.io/f/xxxxxxxx" method="POST">`
-
-## Interactive Features Included
-
-| Feature | How it works |
-|---|---|
-| Typewriter hero | Cycles through titles, lands on "Yash Gupta" |
-| Cursor glow | Gold radial glow follows mouse (desktop only) |
-| Dark / Light toggle | Saves preference to localStorage |
-| Mobile hamburger menu | Slide-in panel with overlay |
-| Scroll fade-in | All sections animate up on scroll |
-| Animated counters | Numbers count up when scrolled into view |
-| Skill bars | Bars fill with stagger when scrolled into view |
-| Gallery lightbox | Click any art card to open full detail view |
-| Nav active highlight | Current section's nav link turns gold |
-| Page transition | Subtle opacity dip on section navigation |
-| Contact form | Shows success state (wire up Formspree to actually send) |
+Put these files in the repository root, then enable GitHub Pages from the `main` branch root. For a custom domain, add your domain in the GitHub Pages settings and configure your DNS records with your domain provider.
