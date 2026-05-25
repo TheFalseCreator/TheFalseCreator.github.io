@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     glow.style.display = "none";
   }
 
-  const descriptors = ["Researcher", "Innovator", "Student Leader", "Mr. Springdales", "Physics Club Founder", "Thinker"];
+  const descriptors = ["Researcher", "Innovator", "Student Leader", "Mr. Springdales", "Thinker"];
   const descriptor = document.querySelector("[data-random-descriptor]");
   if (descriptor) {
     descriptor.textContent = descriptors[Math.floor(Math.random() * descriptors.length)];
